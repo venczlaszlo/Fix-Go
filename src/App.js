@@ -12,6 +12,8 @@ import RegisterPage from './pages/RegisterPage';
 import PrivacyPage from './pages/PrivacyPage';
 import TermsOfUsePage from './pages/TermsofUsePage';
 
+import UsersList from './UsersList';
+
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
 
           <Route path="/privacy" element={<PrivacyPage />} />
           <Route path="/termsofuse" element={<TermsOfUsePage />} />
+
+          <Route path="/users" component={UsersList} />
           
         </Routes>
       </div>

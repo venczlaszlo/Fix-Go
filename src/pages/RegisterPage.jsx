@@ -8,69 +8,46 @@ function RegisterPage() {
   const [jelszo, setJelszo] = useState('');
   const [jelszoMegerosites, setJelszoMegerosites] = useState('');
   const [hiba, setHiba] = useState('');
+  const [siker, setSiker] = useState('');
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-
     if (jelszo !== jelszoMegerosites) {
-      setHiba('A két jelszó nem egyezik!');
+      setHiba('❌ A két jelszó nem egyezik!');
       return;
     }
 
-    alert(`Sikeres regisztráció!\n\nNév: ${keresztnev} ${vezeteknev}\nEmail: ${email}\nJelszó: ${jelszo}`);
+    try {
+      const response = await fetch('http://localhost:5000/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ vezeteknev, keresztnev, email, jelszo })
+      });
+
+      const data = await response.json();
+      if (response.ok) {
+        setSiker(data.message);
+        setHiba('');
+      } else {
+        setHiba(data.error);
+      }
+    } catch (error) {
+      setHiba('❌ Hálózati hiba!');
+    }
   };
 
   return (
     <form onSubmit={handleSubmit}>
-      <div>
-        <h2>Regisztráció</h2>
-        
-        <div>
-          <input 
-            type="text" 
-            value={vezeteknev} 
-            onChange={(event) => setVezeteknev(event.target.value)} 
-            placeholder="Vezetéknév" 
-          />
-          <input 
-            type="text" 
-            value={keresztnev} 
-            onChange={(event) => setKeresztnev(event.target.value)} 
-            placeholder="Keresztnév" 
-          />
-        </div>
-
-        <p />
-
-        <input 
-          type="email" 
-          value={email} 
-          onChange={(event) => setEmail(event.target.value)} 
-          placeholder="Email cím" 
-        />
-        <p />
-        <input 
-          type="password" 
-          value={jelszo} 
-          onChange={(event) => setJelszo(event.target.value)} 
-          placeholder="Jelszó" 
-        />
-        <p />
-        <input 
-          type="password" 
-          value={jelszoMegerosites} 
-          onChange={(event) => setJelszoMegerosites(event.target.value)} 
-          placeholder="Jelszó megerősítése" 
-        />
-
-        {hiba && <p style={{ color: 'red' }}>{hiba}</p>}
-
-        <h5>A regisztrációval elfogadod a felhasználási feltételeket.</h5>
-
-        <input type="submit" value="Regisztráció"/>
-        
-        <p>Van már fiókod? <Link to="/login">Jelentkezz be!</Link></p>
-      </div>
+      <h2>Regisztráció</h2>
+      <input type="text" value={vezeteknev} onChange={e => setVezeteknev(e.target.value)} placeholder="Vezetéknév" />
+      <input type="text" value={keresztnev} onChange={e => setKeresztnev(e.target.value)} placeholder="Keresztnév" />
+      <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="Email cím" />
+      <input type="password" value={jelszo} onChange={e => setJelszo(e.target.value)} placeholder="Jelszó" />
+      <input type="password" value={jelszoMegerosites} onChange={e => setJelszoMegerosites(e.target.value)} placeholder="Jelszó megerősítése" />
+      {hiba && <p style={{ color: 'red' }}>{hiba}</p>}
+      {siker && <p style={{ color: 'green' }}>{siker}</p>}
+      <input type="submit" value="Regisztráció"/>
+      <p>Van már fiókod? <Link to="/login">Jelentkezz be!</Link></p>
     </form>
   );
 }

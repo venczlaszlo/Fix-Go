@@ -26,6 +26,7 @@ const Footer = () => {
             <strong className="site-name">Fix-Go.hu</strong>
             <Link to="/privacy">Adatvédelem</Link>
             <Link to="/termsofuse">Felhasználói feltételek</Link>
+            <Link to="/users">Felhasználók listája teszt</Link>
           </nav>
         </div>
       </div>
