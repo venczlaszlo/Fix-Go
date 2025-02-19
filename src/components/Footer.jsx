@@ -10,23 +10,13 @@ const Footer = () => {
         <div className="footer-left">
           <img src={logo} alt="Fix-Go Logo" className="footer-logo" />
           <p className="quote">"A legjobb út a célhoz vezet."</p>
-          <div className="settings">
-            <select>
-              <option value="hu">Magyar</option>
-              <option value="en">English</option>
-            </select>
-            <select>
-              <option value="light">Világos</option>
-              <option value="dark">Sötét</option>
-            </select>
-          </div>
+
         </div>
         <div className="footer-right">
           <nav>
             <strong className="site-name">Fix-Go.hu</strong>
             <Link to="/privacy">Adatvédelem</Link>
             <Link to="/termsofuse">Felhasználói feltételek</Link>
-            <Link to="/users">Felhasználók listája teszt</Link>
           </nav>
         </div>
       </div>

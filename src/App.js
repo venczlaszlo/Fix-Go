@@ -15,6 +15,7 @@ import TermsOfUsePage from './pages/TermsofUsePage';
 import UsersList from './UsersList';
 
 
+
 function App() {
   return (
     <Router>
@@ -28,7 +29,7 @@ function App() {
           <Route path="/privacy" element={<PrivacyPage />} />
           <Route path="/termsofuse" element={<TermsOfUsePage />} />
 
-          <Route path="/users" component={UsersList} />
+          <Route path="/users" element={<UsersList />} />
           
         </Routes>
       </div>
