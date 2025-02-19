@@ -10,7 +10,6 @@ const Footer = () => {
         <div className="footer-left">
           <img src={logo} alt="Fix-Go Logo" className="footer-logo" />
           <p className="quote">"A legjobb út a célhoz vezet."</p>
-
         </div>
         <div className="footer-right">
           <nav>
