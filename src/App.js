@@ -12,14 +12,18 @@ import RegisterPage from './pages/RegisterPage';
 import PrivacyPage from './pages/PrivacyPage';
 import TermsOfUsePage from './pages/TermsofUsePage';
 
-import UsersList from './UsersList';
-
-
+import Alkatreszkereskedo from './pages/Alkatreszkereskedo';
+import Automentok from './pages/Automentok';
+import Automoso from './pages/Automoso';
+import Autoszerelo from './pages/Autoszerelo';
+import Gumis from './pages/Gumis';
 
 function App() {
   return (
     <Router>
+
       <Header />
+
       <div className="container">
         <Routes>
         <Route path="/" element={<HomePage />} />
@@ -29,11 +33,17 @@ function App() {
           <Route path="/privacy" element={<PrivacyPage />} />
           <Route path="/termsofuse" element={<TermsOfUsePage />} />
 
-          <Route path="/users" element={<UsersList />} />
+          <Route path="/alkatreszkereskedo" element={<Alkatreszkereskedo />} />
+          <Route path="/automentok" element={<Automentok />} />
+          <Route path="/automoso" element={< Automoso/>} />
+          <Route path="/autoszerelo" element={< Autoszerelo/>} />
+          <Route path="/gumis" element={< Gumis/>} />
           
         </Routes>
       </div>
+
       <Footer />
+
     </Router>
   );
 }
