@@ -41,18 +41,21 @@ function RegisterPage() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>Regisztráció</h2>
-      <input type="text" value={vezeteknev} onChange={e => setVezeteknev(e.target.value)} placeholder="Vezetéknév" /> 
-      <input type="text" value={keresztnev} onChange={e => setKeresztnev(e.target.value)} placeholder="Keresztnév" /><p />
-      <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="Email cím" /><p />
-      <input type="password" value={jelszo} onChange={e => setJelszo(e.target.value)} placeholder="Jelszó" />
-      <input type="password" value={jelszoMegerosites} onChange={e => setJelszoMegerosites(e.target.value)} placeholder="Jelszó megerősítése" /><p />
-      {hiba && <p style={{ color: 'red' }}>{hiba}</p>}
-      {siker && <p style={{ color: 'green' }}>{siker}</p>}
-      <input type="submit" value="Regisztráció"/>
-      <p>Van már fiókod? <Link to="/login">Jelentkezz be!</Link></p>
-    </form>
+    <div className='asd'>
+      <form onSubmit={handleSubmit}>
+        <h2>Regisztráció</h2>
+        <input type="text" value={vezeteknev} onChange={e => setVezeteknev(e.target.value)} placeholder="Vezetéknév" />
+        <input type="text" value={keresztnev} onChange={e => setKeresztnev(e.target.value)} placeholder="Keresztnév" /><p />
+        <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="Email cím" /><p />
+        <input type="password" value={jelszo} onChange={e => setJelszo(e.target.value)} placeholder="Jelszó" />
+        <input type="password" value={jelszoMegerosites} onChange={e => setJelszoMegerosites(e.target.value)} placeholder="Jelszó megerősítése" /><p />
+        {hiba && <p style={{ color: 'red' }}>{hiba}</p>}
+        {siker && <p style={{ color: 'green' }}>{siker}</p>}
+        <input type="submit" value="Regisztráció" />
+        <p>Van már fiókod? <Link to="/login">Jelentkezz be!</Link></p>
+      </form>
+    </div>
+
   );
 }
 

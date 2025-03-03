@@ -33,39 +33,42 @@ const LoginPage = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>Bejelentkezés</h2>
+    <div className='asd'>
+      <form onSubmit={handleSubmit}>
+        <h2>Bejelentkezés</h2>
 
-      <input
-        type="email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        placeholder="Email cím"
-      />
-      <p />
-
-      <input
-        type="password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        placeholder="Jelszó"
-      />
-      <p />
-
-      <label>
         <input
-          type="checkbox"
-          checked={rememberMe}
-          onChange={(e) => setRememberMe(e.target.checked)}
-        />{' '}
-        Emlékezz rám
-      </label>
-      <p />
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="Email cím"
+        />
+        <p />
 
-      <button type="submit">Bejelentkezés</button>
+        <input
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          placeholder="Jelszó"
+        />
+        <p />
 
-      <p>Új vagy itt? <Link to="/register">Regisztrálj!</Link></p>
-    </form>
+        <label>
+          <input
+            type="checkbox"
+            checked={rememberMe}
+            onChange={(e) => setRememberMe(e.target.checked)}
+          />{' '}
+          Emlékezz rám
+        </label>
+        <p />
+
+        <button type="submit">Bejelentkezés</button>
+
+        <p>Új vagy itt? <Link to="/register">Regisztrálj!</Link></p>
+      </form>
+    </div>
+
   );
 };
 
