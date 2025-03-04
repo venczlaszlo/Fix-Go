@@ -9,39 +9,25 @@
   padding: 0 320px;
   transition: background-color 0.3s, opacity 0.3s;
   z-index: 1000;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.432);
   height: 80px;
 }
 
-.logo {
+.logo img {
   display: flex;
   align-items: center;
-  height: 100%;
-}
-
-.logo img {
   height: 60px;
-}
-
-nav {
-  display: flex;
-  justify-content: center;
-  height: 100%;
 }
 
 .login-button {
   background-color: #dbdbdb;
   color: black;
   padding: 8px 16px;
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s;
   height: 40px;
   display: flex;
   align-items: center;
-  justify-content: center; /* Középre igazítja a tartalmat a gombban */
 }
 
 .login-button:hover {

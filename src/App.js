@@ -21,12 +21,13 @@ import Gumis from './pages/Gumis';
 function App() {
   return (
     <Router>
-
-      <Header />
+      <div className="header">
+        <Header />
+      </div>
 
       <div className="container">
         <Routes>
-        <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
 
@@ -35,15 +36,15 @@ function App() {
 
           <Route path="/alkatreszkereskedo" element={<Alkatreszkereskedo />} />
           <Route path="/automentok" element={<Automentok />} />
-          <Route path="/automoso" element={< Automoso/>} />
-          <Route path="/autoszerelo" element={< Autoszerelo/>} />
-          <Route path="/gumis" element={< Gumis/>} />
-          
+          <Route path="/automoso" element={<Automoso />} />
+          <Route path="/autoszerelo" element={<Autoszerelo />} />
+          <Route path="/gumis" element={<Gumis />} />
         </Routes>
       </div>
 
-      <Footer />
-
+      <div className="footer">
+        <Footer />
+      </div>
     </Router>
   );
 }

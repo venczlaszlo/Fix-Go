@@ -9,10 +9,6 @@ body {
   min-height: 100vh;
 }
 
-#root {
-  flex: 1;
-}
-
 .container {
   padding-left: 320px;
   padding-right: 320px;
@@ -20,20 +16,6 @@ body {
   padding-bottom: 80px; /* Footer miatt */
   max-width: 1600px;
   margin: 0 auto;
-}
-
-@media (max-width: 1024px) {
-  .container {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-}
-
-@media (max-width: 768px) {
-  .container {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
 }
 
 .asd {
