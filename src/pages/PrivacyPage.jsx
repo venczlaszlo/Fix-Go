@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const LoginPage = () => {
     return (
         <div>
-            <h2>Adatvédelmi Nyilatkozat (Privacy Policy)</h2>
+            <h1>Adatvédelmi Nyilatkozat (Privacy Policy)</h1>
             <p><strong>1. Adatkezelő és elérhetőségek</strong></p>
             <p>Az adatkezelő: Vencz László (a weboldal üzemeltetője)</p>
             <p>Elérhetőség: [email cím vagy elérhetőség, ha van]</p>

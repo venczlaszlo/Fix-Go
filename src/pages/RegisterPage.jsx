@@ -43,7 +43,7 @@ function RegisterPage() {
   return (
     <div className='asd'>
       <form onSubmit={handleSubmit}>
-        <h2>Regisztráció</h2>
+        <h1>Regisztráció</h1>
         <input type="text" value={vezeteknev} onChange={e => setVezeteknev(e.target.value)} placeholder="Vezetéknév" />
         <input type="text" value={keresztnev} onChange={e => setKeresztnev(e.target.value)} placeholder="Keresztnév" /><p />
         <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="Email cím" /><p />

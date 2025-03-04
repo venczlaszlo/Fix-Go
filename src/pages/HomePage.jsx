@@ -5,7 +5,7 @@ import './HomePage.css';
 import automosologo from '../images/automosologo.png';
 import autoszerelologo from '../images/autoszerelologo.png';
 import alkatreszkereskedologo from '../images/alkatreszkereskedologo.png';
-import gumislogo from '../images/gumislogo.png';
+import gumiszervizlogo from '../images/gumiszervizlogo.png';
 import automentoklogo from '../images/automentoklogo.png';
 
 
@@ -31,10 +31,10 @@ const HomePage = () => {
           </button>
         </Link>
 
-        <Link to="/gumis">
+        <Link to="/gumiszerviz">
           <button className="service-button">
-            <img src={gumislogo} alt="Gumis ikon" className="service-icon" />
-            Gumisok
+            <img src={gumiszervizlogo} alt="Gumiszervíz ikon" className="service-icon" />
+            Gumiszervízek
           </button>
         </Link>
 

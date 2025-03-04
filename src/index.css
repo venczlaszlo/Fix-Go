@@ -16,6 +16,10 @@ body {
   padding-bottom: 80px; /* Footer miatt */
   max-width: 1600px;
   margin: 0 auto;
+
+  background-image: url(./images/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .asd {

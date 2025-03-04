@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const LoginPage = () => {
     return (
         <div>
-            <h2>Felhasználói Feltételek (Terms of Service)</h2>
+            <h1>Felhasználói Feltételek (Terms of Service)</h1>
             <p><strong>1. A szolgáltatás leírása</strong></p>
             <p>A weboldal célja, hogy a felhasználók számára információkat biztosítson a helyi autószerelőkről, autómosókról, alkatrészkereskedőkről és egyéb járműszolgáltatókról.</p>
 

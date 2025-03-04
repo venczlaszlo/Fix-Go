@@ -16,7 +16,7 @@ import Alkatreszkereskedo from './pages/Alkatreszkereskedo';
 import Automentok from './pages/Automentok';
 import Automoso from './pages/Automoso';
 import Autoszerelo from './pages/Autoszerelo';
-import Gumis from './pages/Gumis';
+import Gumiszerviz from './pages/Gumiszerviz';
 
 function App() {
   return (
@@ -36,7 +36,7 @@ function App() {
           <Route path="/automentok" element={<Automentok />} />
           <Route path="/automoso" element={< Automoso/>} />
           <Route path="/autoszerelo" element={< Autoszerelo/>} />
-          <Route path="/gumis" element={< Gumis/>} />
+          <Route path="/gumiszerviz" element={< Gumiszerviz/>} />
           
         </Routes>
       </div>

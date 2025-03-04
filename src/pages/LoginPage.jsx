@@ -35,7 +35,7 @@ const LoginPage = () => {
   return (
     <div className='asd'>
       <form onSubmit={handleSubmit}>
-        <h2>Bejelentkezés</h2>
+        <h1>Bejelentkezés</h1>
 
         <input
           type="email"
