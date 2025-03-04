@@ -12,7 +12,7 @@ import automentoklogo from '../images/automentoklogo.png';
 const HomePage = () => {
   return (
     <div className='body'>
-      <h2>Találd meg a számodra megfelelő szolgáltatást!</h2>
+      <h1>Találd meg a számodra megfelelő szolgáltatást!</h1>
 
       <p className='feherter'/>
       
